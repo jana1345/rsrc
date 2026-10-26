@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Lunar lander on a powered descent trajectory">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1422"/>
+      <stop offset=".55" stop-color="#07101b"/>
+      <stop offset="1" stop-color="#050a11"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset=".6" stop-color="#f5c26b"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="moon" cx=".5" cy=".2" r=".8">
+      <stop offset="0" stop-color="#243447"/>
+      <stop offset="1" stop-color="#0a111c"/>
+    </radialGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5eead4" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0v36" fill="none" stroke="#5eead4" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <clipPath id="round">
+      <rect x="1" y="1" width="718" height="518" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect x="1" y="1" width="718" height="518" fill="url(#panel)" stroke="#5eead4" stroke-opacity=".22"/>
+    <rect x="1" y="1" width="718" height="518" fill="url(#grid)"/>
+
+    <!-- stars -->
+    <g fill="#dffcf6">
+      <circle cx="86" cy="72" r="1.2" opacity=".7"/>
+      <circle cx="148" cy="118" r=".9" opacity=".45"/>
+      <circle cx="231" cy="61" r="1.1" opacity=".6"/>
+      <circle cx="312" cy="95" r=".8" opacity=".4"/>
+      <circle cx="405" cy="52" r="1.3" opacity=".75"/>
+      <circle cx="492" cy="108" r=".9" opacity=".5"/>
+      <circle cx="568" cy="66" r="1.1" opacity=".65"/>
+      <circle cx="642" cy="132" r=".8" opacity=".45"/>
+      <circle cx="112" cy="210" r=".8" opacity=".4"/>
+      <circle cx="663" cy="224" r="1" opacity=".5"/>
+      <circle cx="520" cy="186" r=".8" opacity=".4"/>
+      <circle cx="345" cy="177" r=".9" opacity=".45"/>
+    </g>
+
+    <!-- moon limb -->
+    <circle cx="360" cy="1100" r="800" fill="url(#moon)" stroke="#94a3b8" stroke-opacity=".28" stroke-width="1.4"/>
+    <g fill="none" stroke="#94a3b8" stroke-opacity=".18">
+      <ellipse cx="238" cy="382" rx="26" ry="8"/>
+      <ellipse cx="470" cy="414" rx="40" ry="11"/>
+      <ellipse cx="565" cy="368" rx="18" ry="5"/>
+      <ellipse cx="150" cy="432" rx="14" ry="4"/>
+      <ellipse cx="385" cy="346" rx="11" ry="3"/>
+    </g>
+
+    <!-- descent trajectory -->
+    <path d="M92 62 C180 118 206 214 284 292 S430 380 528 416" fill="none" stroke="#f5c26b" stroke-width="1.7" stroke-dasharray="7 8" stroke-opacity=".85"/>
+    <circle cx="92" cy="62" r="5" fill="#f5c26b"/>
+    <circle cx="528" cy="416" r="6" fill="#5eead4"/>
+
+    <!-- guidance vector -->
+    <path d="M405 246l-44 52" stroke="#5eead4" stroke-width="1.3" stroke-dasharray="3 4"/>
+    <path d="M361 298l14-3-5 12z" fill="#5eead4"/>
+
+    <!-- lander glow -->
+    <ellipse cx="418" cy="282" rx="118" ry="100" fill="url(#glow)" filter="url(#soft)"/>
+
+    <!-- lander body -->
+    <g transform="translate(404 208) rotate(12)">
+      <g fill="none" stroke="url(#copper)" stroke-width="2.4" stroke-linejoin="round">
+        <!-- descent stage -->
+        <path d="M-36 34h72l10 30h-92z" fill="#0c1726"/>
+        <path d="M-26 34V10h52v24"/>
+        <path d="M-18 10V-2h36v12"/>
+        <!-- legs -->
+        <path d="M-40 64l-26 30M40 64l26 30"/>
+        <path d="M-15 64l-8 34M15 64l8 34"/>
+        <!-- engine bell -->
+        <path d="M-12 64h24l-6 22h-12z" fill="#0c1726"/>
+        <!-- windows -->
+        <rect x="-14" y="17" width="9" height="7" rx="1" stroke="#5eead4"/>
+        <rect x="5" y="17" width="9" height="7" rx="1" stroke="#5eead4"/>
+        <!-- antenna -->
+        <path d="M0-2v-13"/>
+        <circle cx="0" cy="-18" r="4"/>
+      </g>
+      <!-- plume -->
+      <path d="M-9 86c-10 18-8 34 0 52 3-13 7-24 9-38 2 14 6 25 9 38 8-18 10-34 0-52z" fill="#5eead4" opacity=".18"/>
+      <path d="M-4 86c-4 12-3 23 0 34 1-8 2-14 4-22 2 8 3 14 4 22 3-11 4-22 0-34z" fill="#f5c26b" opacity=".7"/>
+    </g>
+
+    <!-- axis triad -->
+    <g transform="translate(620 88)" stroke-width="1.2" font-family="monospace" font-size="10" fill="#a8b6c2">
+      <path d="M0 0V-42" stroke="#5eead4"/>
+      <path d="M0 0H38" stroke="#f5c26b"/>
+      <path d="M0 0l-25 20" stroke="#94a3b8"/>
+      <text x="-4" y="-48" fill="#5eead4">z</text>
+      <text x="42" y="4" fill="#f5c26b">x</text>
+      <text x="-34" y="30" fill="#94a3b8">y</text>
+      <circle cx="0" cy="0" r="2.4" fill="#e6edf3" stroke="none"/>
+    </g>
+
+    <!-- labels -->
+    <g font-family="monospace" font-size="11" fill="#a8b6c2">
+      <text x="68" y="52" fill="#f5c26b">PDI</text>
+      <text x="68" y="66" fill="#6f8190">15 km</text>
+      <text x="505" y="440" fill="#5eead4">TOUCHDOWN</text>
+      <text x="505" y="454" fill="#6f8190">TARGET PAD</text>
+    </g>
+    <g font-family="monospace" font-size="9" fill="#6f8190" letter-spacing="2">
+      <text x="40" y="484">MCMF / ENU</text>
+      <text x="562" y="484">GNC · FSW</text>
+    </g>
+  </g>
+</svg>

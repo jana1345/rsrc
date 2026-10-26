@@ -1,0 +1,21 @@
+{
+  "name": "lunar-fsw-field-guide",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A structured study site for lunar lander GNC and flight software.",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "check:links": "node scripts/check-links.mjs",
+    "clean": "rm -rf docs/.vitepress/dist docs/.vitepress/cache"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.12.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.24"
+  }
+}
